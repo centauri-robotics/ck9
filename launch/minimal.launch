@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+<include file="$(find ydlidar_ros)/launch/S2new.launch" />
+
+<include file="$(find ck9)/launch/ck9_states.launch" />
+    
+    <node name="serial_node" pkg="rosserial_python" type="serial_node.py" args="/dev/ttyACM1" />
+    <include file="$(find mpu6050_serial_to_imu)/launch/demo.launch" />
+    <node name="twist" pkg="ck9" type="twist.py" />
+    <node name="diff_tf" pkg="ck9" type="raw_odom.py" />
+<include file="$(find ck9)/launch/smoothometry.launch" />
+</launch>

@@ -1,6 +1,5 @@
 /***
    DC Motor-Encoder ROS Serial Communication Code
-   Author: Jash Mota
    Company: Centauri Robotics
 ***/
 #include <ros.h>
