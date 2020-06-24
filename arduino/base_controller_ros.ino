@@ -136,7 +136,7 @@ ros::Subscriber<std_msgs::Float32> subr("right_wheel_speed", &rightmotor);
 void setup()
 {
   //Initialise node and subscribe to necessary topics
-  nh.getHardware()->setBaud(38400);
+  nh.getHardware()->setBaud(57600);
   nh.initNode();
   nh.subscribe(subl);
   nh.subscribe(subr);
