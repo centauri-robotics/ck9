@@ -6,10 +6,7 @@
 
   <maintainer email="contact@centaurirobotics.in">Jash Mota</maintainer>
 
-  <!-- One license tag required, multiple allowed, one license per tag -->
-  <!-- Commonly used license strings: -->
-  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
-  <license>TODO</license>
+  <license>MIT</license>
 
   <!-- <url type="website">http://wiki.ros.org/ck9</url> -->
 
