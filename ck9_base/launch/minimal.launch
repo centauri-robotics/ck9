@@ -4,8 +4,10 @@
 
 <include file="$(find ck9_base)/launch/ck9_states.launch" />
     
-    <node name="serial_node" pkg="rosserial_python" type="serial_node.py" args="/dev/ttyACM1" />
-    <include file="$(find mpu6050_serial_to_imu)/launch/demo.launch" />
+    <node name="serial_node" pkg="rosserial_python" type="serial_node.py" args="/dev/motor" />
+    <node pkg="mpu6050_serial_to_imu" type="mpu6050_serial_to_imu_node" name="mpu6050_serial_to_imu_node" required="true">
+    <param name="port" value="/dev/imu"/>
+  </node>
     <node name="twist" pkg="ck9_base" type="twist.py" />
     <node name="diff_tf" pkg="ck9_base" type="raw_odom.py" />
 <include file="$(find ck9_base)/launch/smoothometry.launch" />
