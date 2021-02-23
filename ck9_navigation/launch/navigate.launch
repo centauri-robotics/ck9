@@ -1,0 +1,17 @@
+<launch>
+    <!-- Map server -->
+    <arg name="map_file" default="$(find ck9_navigation)/maps/willowgarage_gmapping.yaml"/>
+    <node pkg="map_server" name="map_server"  type="map_server" args="$(arg map_file)" />
+    <!-- AMCL used for localization -->
+    <include file="$(find ck9_navigation)/launch/include/amcl.launch" />
+    
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+        <rosparam file="$(find ck9_navigation)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
+        <rosparam file="$(find ck9_navigation)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
+        <rosparam file="$(find ck9_navigation)/param/local_costmap_params.yaml" command="load" />
+        <rosparam file="$(find ck9_navigation)/param/global_costmap_params.yaml" command="load" />
+        <rosparam file="$(find ck9_navigation)/param/base_local_planner_default_params.yaml" command="load" />
+        <rosparam file="$(find ck9_navigation)/param/move_base_params.yaml" command="load" />
+    </node>
+</launch>
+

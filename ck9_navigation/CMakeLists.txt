@@ -8,7 +8,7 @@ project(ck9_navigation)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  ck9_gazebo
+  ck9_base
   move_base
 )
 
@@ -104,7 +104,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES ck9_navigation
-#  CATKIN_DEPENDS ck9_gazebo move_base
+#  CATKIN_DEPENDS ck9_base move_base
 #  DEPENDS system_lib
 )
 
