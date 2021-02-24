@@ -22,15 +22,15 @@ To buy CK-9, click here: https://centaurirobotics.in/dev/buy.html
 - ```source ~/catkin_ws/devel/setup.bash```
 
 ## How to teleop?
-- ```roslaunch ck9 minimal.launch```
+- ```roslaunch ck9_base minimal.launch```
 - ```roslaunch turtlebot_teleop keyboard_teleop.launch```
 
 That's it play around with your CK-9 and move it around with your PC keyboard!
 
 ## How to create a map/run SLAM?
-- ```roslaunch ck9 minimal.launch```
+- ```roslaunch ck9_base minimal.launch```
 - ```roslaunch turtlebot_teleop keyboard_teleop.launch```
-- ```rosrun gmapping slam_gmapping```
+- ```roslaunch ck9_navigation slam.launch```
 - ```roscd ck9/rviz``` and then ```rviz -d slam.rviz```
 - View the bot and the map being created in rviz, and move around the bot with teleop to build a full map
 - To save the map: ```rosrun map_server map_saver -f map_name``` with terminal at the location where you want to save the map
@@ -38,6 +38,6 @@ That's it play around with your CK-9 and move it around with your PC keyboard!
 
 ## How to run autonomous navigation?
 - ```roslaunch ck9 minimal.launch```
-- ```roslaunch ck9_navigation ck9_navigation.launch map_file:=/home/username/path_to_map.yaml``` (The default map is the willowgarage_gmapping.yaml provided in this repo's map folder)
+- ```roslaunch ck9_navigation navigate.launch map_file:=/home/username/path_to_map.yaml``` 
 - ```roscd ck9/rviz``` and then ```rviz -d navigate.rviz```
 - Use the "2D Nav Goal" button in rviz to publish your navigation goals and see your CK-9 in action!
