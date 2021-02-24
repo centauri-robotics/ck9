@@ -37,7 +37,7 @@ That's it play around with your CK-9 and move it around with your PC keyboard!
 - You now have a map ready to run your bot autonomously on!
 
 ## How to run autonomous navigation?
-- ```roslaunch ck9 minimal.launch```
+- ```roslaunch ck9_base minimal.launch```
 - ```roslaunch ck9_navigation navigate.launch map_file:=/home/username/path_to_map.yaml``` 
-- ```roscd ck9/rviz``` and then ```rviz -d navigate.rviz```
+- ```roscd ck9_base/rviz``` and then ```rviz -d navigate.rviz```
 - Use the "2D Nav Goal" button in rviz to publish your navigation goals and see your CK-9 in action!
