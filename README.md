@@ -1,7 +1,7 @@
 # ck9
 Code for CK-9 Robotics Development Kit
 
-To buy CK-9, click here: https://centaurirobotics.in/dev/buy.html
+To buy CK-9, click here: https://centaurirobotics.in/dev/#buy
 
 ## Software required:
 1. Ubuntu 16.04 or higher
